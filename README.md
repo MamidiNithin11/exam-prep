@@ -31,9 +31,9 @@ This platform addresses that by providing a structured, easy-to-navigate interfa
 ## 📸 Screenshots
 | Landing Page | Semsters | Questions Page |
 |--------------|----------|----------------|
-| ---<img width="1892" height="857" alt="Screenshot 2025-09-22 160306" src="https://github.com/user-attachments/assets/f920df72-1ebe-404d-94f5-9c5ada74ad59" /> | !<img width="1913" height="874" alt="Screenshot 2025-09-22 160314" src="https://github.com/user-attachments/assets/4697385d-a603-4e60-af59-ec60253f65bd" /> | 
-
-<img width="1408" height="873" alt="Screenshot 2025-09-22 160355" src="https://github.com/user-attachments/assets/eab1806d-96ff-46eb-9e3f-916a9eb221a6" />|
+| ---<img width="1892" height="857" alt="Screenshot 2025-09-22 160306" src="https://github.com/user-attachments/assets/f920df72-1ebe-404d-94f5-9c5ada74ad59" /> 
+| !<img width="1913" height="874" alt="Screenshot 2025-09-22 160314" src="https://github.com/user-attachments/assets/4697385d-a603-4e60-af59-ec60253f65bd" /> 
+| <img width="1408" height="873" alt="Screenshot 2025-09-22 160355" src="https://github.com/user-attachments/assets/eab1806d-96ff-46eb-9e3f-916a9eb221a6" /> |
 
 **AI Chat Assistant:**  
 
