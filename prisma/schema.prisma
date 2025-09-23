@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Branch {
+  id          String   @id @map("_id") @default(auto()) @db.ObjectId
+  code        String   @unique 
+  name        String
+  fullName    String
+  icon        String
+  color       String
+  bgColor     String
+  borderColor String
+  textColor   String
+  description String
+
+  @@map("branches")
+}
