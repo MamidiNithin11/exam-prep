@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+B.Tech ExamPrep Genius 🎓🤖
+An AI-powered web platform designed to help B.Tech engineering students excel in exams by providing curated question banks, video tutorials, and a real-time AI study assistant for instant doubt clarification.
 
-## Getting Started
+License: MITReactTailwind CSSOpenAI
 
-First, run the development server:
+Live Demo »
 
-```bash
+📜 Table of Contents
+About The Project
+Key Features
+Screenshots
+Tech Stack
+Getting Started
+Prerequisites
+Installation
+License
+Contact
+📖 About The Project
+B.Tech ExamPrep Genius was born from the idea of creating a centralized, intelligent study tool for engineering students. Traditional exam preparation often involves disorganized notes and a lack of immediate help for complex problems. This platform addresses that by providing a structured, easy-to-navigate interface with high-value, curated content and an AI-powered assistant to make learning more efficient and effective.
+
+The goal is to help students study smarter, not just harder, by focusing on what truly matters for exam success.
+
+✨ Key Features
+🧠 AI Study Assistant: Integrated with the OpenAI API, it provides instant, context-aware explanations for any question, acting as a 24/7 personal tutor.
+📚 Curated Question Bank: Access to a rich database of frequently repeated, high-priority exam questions across 4 major engineering branches (AI/ML, CSE, ECE, EEE).
+🔍 Smart Search & Filtering: Powerful search functionality to find questions by topic, keywords, branch, semester, difficulty, or unit.
+🔖 Personal Bookmarks with Notes: Save important questions for quick revision and add personal notes to remember key points.
+🎥 Integrated Video Tutorials: Curated YouTube videos are linked directly to relevant questions for enhanced visual learning.
+🔐 Secure User Authentication: Seamless and secure Google OAuth login to provide a personalized and persistent user experience.
+📱 Responsive Design: Fully responsive interface that works beautifully on desktops, tablets, and mobile devices.
+📸 Screenshots
+Landing Page	Dashboard	Questions Page
+Landing Page	Dashboard	Questions
+AI Chat Assistant
+AI Chat
+🛠️ Tech Stack
+This project was built using a modern, scalable tech stack:
+
+Frontend: React.js, Tailwind CSS, Shadcn UI, Framer Motion
+Backend & Database: base44 Platform (Serverless Functions & PostgreSQL)
+AI Integration: OpenAI API (GPT-3.5 Turbo)
+Authentication: Google OAuth
+Language: JavaScript (ES6+)
+🚀 Getting Started
+To get a local copy up and running, follow these simple steps.
+
+Prerequisites
+Node.js (v16 or later)
+npm or yarn
+Installation
+Clone the repository
+
+git clone https://github.com/your-username/your-repo-name.git
+Navigate to the project directory
+
+cd your-repo-name
+Install NPM packages
+
+npm install
+Set up environment variables
+
+Create a .env.local file in the root of your project and add your API keys. You will need an API key from OpenRouter to handle the OpenAI requests.
+
+NEXT_PUBLIC_OPENROUTER_API_KEY="your-openrouter-api-key"
+Note: This project uses OpenRouter as a proxy for the OpenAI API to simplify key management in a public repo.
+
+Run the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 to view it in the browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📄 License
+Distributed under the MIT License. See LICENSE for more information.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+📬 Contact
+Your Name - Your LinkedIn Profile - your.email@example.com
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Project Link: https://github.com/your-username/your-repo-name
 
-## Learn More
+How to use this file:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Replace all placeholder links and paths (your-live-demo-url.com, your-username, your-repo-name, your-linkedin-username, your.email@example.com).
+Take screenshots of your application and save them in a public-facing folder (like public/images/) and update the paths in the Screenshots section.
