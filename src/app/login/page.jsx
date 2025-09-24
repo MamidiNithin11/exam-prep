@@ -4,25 +4,18 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Cookies from 'js-cookie'
-import { Loader2 } from 'lucide-react'
-
-// UI Components
+import { Loader2 } from 'lucide-react
 import { Button } from '@/components/ui/button'
-
-// Firebase Auth Methods
 import { registerUser, loginUser, loginWithGoogle } from '@/lib/firebase'
 
 export default function LoginPage() {
-  // -------------------- STATES --------------------
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [mode, setMode] = useState('register') // "register" | "login"
+  const [mode, setMode] = useState('register')
   const [message, setMessage] = useState('')
   const [loading, setLoading] = useState(false)
 
   const router = useRouter()
-
-  // -------------------- CHECK TOKEN --------------------
   useEffect(() => {
     let mounted = true
 
@@ -46,12 +39,10 @@ export default function LoginPage() {
 
     try {
       if (mode === 'register') {
-        // Register new user
         await registerUser(email, password)
-        setMessage('✅ Registration successful! Please log in.')
+        setMessage('Registration successful! Please log in.')
         setMode('login')
       } else {
-        // Login existing user
         const userCredential = await loginUser(email, password)
         const jwtToken = await userCredential.user.getIdToken()
         Cookies.set('jwt_token', jwtToken, { expires: 30 })
@@ -59,9 +50,8 @@ export default function LoginPage() {
       }
     } catch (err) {
       setMessage(err.message)
-    } finally {
-      setLoading(false)
-    }
+    } 
+    setLoading(false)
   }
 
   const handleGoogleLogin = async () => {
@@ -78,18 +68,12 @@ export default function LoginPage() {
     }
   }
 
-  // -------------------- UI --------------------
   return (
     <div className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
-      {/* Background animations */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-black to-blue-900 animate-pulse" />
       <div className="absolute top-20 left-20 w-72 h-72 bg-purple-600 opacity-30 rounded-full blur-3xl animate-bounce-slow" />
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-blue-600 opacity-30 rounded-full blur-3xl animate-bounce-slow delay-700" />
-
-      {/* Auth Box */}
       <div className="relative z-10 w-full max-w-md bg-gray-900/80 border border-gray-700 rounded-2xl shadow-2xl p-8 backdrop-blur-lg">
-        
-        {/* Header */}
         <div className="flex flex-col items-center mb-6">
           <Image
             src="/image2.png"
@@ -106,8 +90,6 @@ export default function LoginPage() {
               ? 'Welcome back! 👋'
               : 'Join the future of exam prep 🚀'}
           </p>
-
-          {/* Google Login */}
           <Button
             onClick={handleGoogleLogin}
             disabled={loading}
@@ -120,17 +102,12 @@ export default function LoginPage() {
             )}
           </Button>
         </div>
-
-        {/* Divider */}
         <div className="flex items-center my-6 text-gray-500">
           <hr className="flex-grow border-gray-700" />
           <span className="px-3 text-sm">or</span>
           <hr className="flex-grow border-gray-700" />
         </div>
-
-        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Email Input */}
           <div className="relative">
             <input
               type="email"
@@ -143,8 +120,6 @@ export default function LoginPage() {
               Email
             </label>
           </div>
-
-          {/* Password Input */}
           <div className="relative">
             <input
               type="password"
@@ -157,8 +132,6 @@ export default function LoginPage() {
               Password
             </label>
           </div>
-
-          {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}
@@ -169,8 +142,6 @@ export default function LoginPage() {
             ) : mode === 'login' ? 'Login' : 'Register'}
           </button>
         </form>
-
-        {/* Switch Mode */}
         <p className="mt-6 text-center text-gray-400">
           {mode === 'login'
             ? "Don't have an account?"
@@ -185,8 +156,6 @@ export default function LoginPage() {
             {mode === 'login' ? 'Register' : 'Login'}
           </button>
         </p>
-
-        {/* Message */}
         {message && (
           <p className="mt-4 text-center text-red-400 text-sm font-medium">
             {message}
